@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Swap in the real domain at launch.
+Sitemap: https://www.example.com/sitemap.xml

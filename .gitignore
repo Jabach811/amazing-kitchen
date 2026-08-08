@@ -1,0 +1,9 @@
+node_modules/
+dist/
+public/
+.wrangler/
+.next/
+.vinext/
+.claude/
+*.tgz
+*.log
