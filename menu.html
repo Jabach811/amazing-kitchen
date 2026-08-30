@@ -4,39 +4,104 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Menu — Amazing Kitchen | Chinese Food in Tracy, CA</title>
-  <meta name="description" content="The full Amazing Kitchen menu: lunch specials, dim sum, chow mein, chow fun, honey walnut prawns, salt and pepper wings, egg foo young and more. Call (209) 835-3888 to order.">
-  <link rel="canonical" href="https://www.amazingkitchentracy.com/menu.html">
+  <meta name="description" content="The full Amazing Kitchen menu: lunch specials, dim sum, chow mein, chow fun, honey walnut prawns, salt and pepper wings and more.">
+
+  <!-- TODO at launch: confirm the live domain, then add
+       <link rel="canonical"> and absolute og:url / og:image here and in sitemap.xml. -->
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Amazing Kitchen">
   <meta property="og:title" content="Menu — Amazing Kitchen, Tracy CA">
   <meta property="og:description" content="Lunch specials, dim sum, chow fun, seafood and more. Call (209) 835-3888 to order direct.">
-  <meta property="og:url" content="https://www.amazingkitchentracy.com/menu.html">
+  <meta property="og:image" content="og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
-  <!-- Only the 25 Chinese glyphs this site actually uses. -->
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;600&text=%E5%90%8D%E8%BB%92%E8%9D%A6%E7%89%9B%E9%A3%AF%E9%BA%B5%E9%9B%9E%E7%BF%85%E5%8D%88%E9%A4%90%E9%BB%9E%E5%BF%83%E5%89%8D%E8%8F%9C%E6%B9%AF%E8%B1%AC%E6%B5%B7%E9%AE%AE%E7%B4%A0%E7%82%92%E8%8A%99%E8%93%89%E8%9B%8B%E6%B2%B3%E7%B2%89&display=swap" rel="stylesheet">
+  <!-- SOFT and WONK have to be named here or Google strips them out of the file. -->
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,400..700,0..100,0..1&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Traditional forms, so the family has to be TC. Only the glyphs this site uses. -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600&text=%E5%90%8D%E8%BB%92%E8%9D%A6%E7%89%9B%E9%A3%AF%E9%BA%B5%E9%9B%9E%E7%BF%85%E5%8D%88%E9%A4%90%E9%BB%9E%E5%BF%83%E5%89%8D%E8%8F%9C%E6%B9%AF%E8%B1%AC%E6%B5%B7%E9%AE%AE%E7%B4%A0%E7%82%92%E8%8A%99%E8%93%89%E8%9B%8B%E6%B2%B3%E7%B2%89&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Menu",
+    "name": "Amazing Kitchen menu",
+    "inLanguage": "en",
+    "hasMenuSection": [
+      {"@type": "MenuSection", "name": "Lunch Specials"},
+      {"@type": "MenuSection", "name": "Dim Sum"},
+      {"@type": "MenuSection", "name": "Appetizers"},
+      {"@type": "MenuSection", "name": "Soups"},
+      {"@type": "MenuSection", "name": "Chicken"},
+      {"@type": "MenuSection", "name": "Chicken Wings"},
+      {"@type": "MenuSection", "name": "Beef"},
+      {"@type": "MenuSection", "name": "Pork"},
+      {"@type": "MenuSection", "name": "Seafood"},
+      {"@type": "MenuSection", "name": "Vegetables & Tofu"},
+      {"@type": "MenuSection", "name": "Fried Rice"},
+      {"@type": "MenuSection", "name": "Egg Foo Young"},
+      {"@type": "MenuSection", "name": "Noodles & Chow Fun"},
+      {"@type": "MenuSection", "name": "Chow Mein"}
+    ],
+    "isPartOf": {
+      "@type": "ChineseRestaurant",
+      "name": "Amazing Kitchen",
+      "alternateName": "名軒",
+      "servesCuisine": "Chinese",
+      "telephone": "+12098353888",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2211 N Tracy Blvd",
+        "addressLocality": "Tracy",
+        "addressRegion": "CA",
+        "postalCode": "95376",
+        "addressCountry": "US"
+      },
+      "openingHoursSpecification": [
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "11:00", "closes": "21:00"}
+      ]
+    }
+  }
+  </script>
 </head>
 <body>
+  <a class="skip" href="#main">Skip to the menu</a>
+
   <header class="site-header">
-    <a class="wordmark" href="index.html">Amazing Kitchen <span class="cjk">名軒</span></a>
+    <a class="wordmark" href="index.html">Amazing Kitchen <span class="cjk" lang="zh-Hant">名軒</span></a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">☰</button>
     <nav class="site-nav" id="site-nav">
-      <a href="menu.html">Menu</a>
+      <a href="menu.html" aria-current="page">Menu</a>
       <a href="index.html#order">Order Direct</a>
       <a href="index.html#find-us">Hours &amp; Location</a>
-      <a class="btn btn-primary" href="tel:+12098353888">(209) 835-3888</a>
+      <a class="btn btn-primary" href="tel:+12098353888" data-place="header">(209) 835-3888</a>
     </nav>
   </header>
 
-  <main>
+  <main id="main">
     <section class="menu-hero">
       <div class="inner">
         <p class="eyebrow">The full menu</p>
         <h1>Everything we cook,<br>in one place.</h1>
-        <p class="lede" style="font-size:19px;color:var(--ink-soft);max-width:52ch;margin-top:22px">
-          Lunch specials run 11am to 3pm. Call <a href="tel:+12098353888">(209) 835-3888</a> to order for pickup.
+        <p class="lede">
+          Lunch specials run 11am to 3pm. Call <a href="tel:+12098353888" data-place="menu-lede">(209) 835-3888</a> to order for pickup.
+          Dishes marked <strong>Ask in store</strong> are priced at the counter. Percentages are real thumbs-up
+          ratings from our online ordering system.
         </p>
+        <div class="menu-search">
+          <label for="menu-search">Search the menu</label>
+          <input type="search" id="menu-search" autocomplete="off"
+                 placeholder="tofu, prawns, spicy, chow fun&hellip;">
+          <p class="search-count" id="search-count" role="status" aria-live="polite"></p>
+        </div>
       </div>
     </section>
 
@@ -47,299 +112,301 @@
         <li><a href="#appetizers">Appetizers</a></li>
         <li><a href="#soups">Soups</a></li>
         <li><a href="#chicken">Chicken</a></li>
-        <li><a href="#wings">Wings</a></li>
+        <li><a href="#wings">Chicken Wings</a></li>
         <li><a href="#beef">Beef</a></li>
         <li><a href="#pork">Pork</a></li>
         <li><a href="#seafood">Seafood</a></li>
-        <li><a href="#vegetables">Vegetables</a></li>
+        <li><a href="#vegetables">Vegetables &amp; Tofu</a></li>
         <li><a href="#rice">Fried Rice</a></li>
         <li><a href="#eggfooyoung">Egg Foo Young</a></li>
-        <li><a href="#noodles">Noodles</a></li>
+        <li><a href="#noodles">Noodles &amp; Chow Fun</a></li>
         <li><a href="#chowmein">Chow Mein</a></li>
       </ul>
     </nav>
 
     <section class="course" id="lunch">
       <div class="inner">
-        <div class="course-head"><h2>Lunch Specials</h2><span class="cjk">午餐</span></div>
+        <div class="course-head"><h2>Lunch Specials</h2><span class="cjk" lang="zh-Hant">午餐</span></div>
         <p class="course-note">
           Served 11am to 3pm. Every lunch comes with an egg roll, a fried wonton, and soup, plus your choice of
           fried rice, chow mein, or steamed rice. Choose chicken, beef, or prawns. <strong>$12.75</strong>
         </p>
         <ul class="items">
-          <li><div class="item-top"><span class="item-name">Sweet &amp; Sour</span></div><p class="item-desc">Crisp, with pineapple, bell pepper and onion.</p></li>
-          <li><div class="item-top"><span class="item-name">Broccoli</span></div><p class="item-desc">Fresh broccoli in a savory brown sauce.</p></li>
-          <li><div class="item-top"><span class="item-name">Mongolian</span></div><p class="item-desc">Scallions and onion in a sweet soy glaze.</p></li>
-          <li><div class="item-top"><span class="item-name">Kung Pao</span> <span class="tag tag-hot">Spicy</span></div><p class="item-desc">Peanuts, bell pepper, carrot and chili.</p></li>
-          <li><div class="item-top"><span class="item-name">Szechwan</span> <span class="tag tag-hot">Spicy</span></div><p class="item-desc">Chili-garlic sauce with mixed vegetables.</p></li>
-          <li><div class="item-top"><span class="item-name">Hunan</span> <span class="tag tag-hot">Spicy</span></div><p class="item-desc">Classic Hunan-style, bold and savory.</p></li>
-          <li><div class="item-top"><span class="item-name">Curry</span></div><p class="item-desc">Onion, bell pepper and carrot in curry sauce.</p></li>
-          <li><div class="item-top"><span class="item-name">Garlic</span></div><p class="item-desc">Heavy on the garlic, in a light brown sauce.</p></li>
-          <li><div class="item-top"><span class="item-name">Almond</span></div><p class="item-desc">Almond gravy, finished with almond slivers.</p></li>
-          <li><div class="item-top"><span class="item-name">Snow Peas</span></div><p class="item-desc">Crisp snow peas and carrot.</p></li>
-          <li><div class="item-top"><span class="item-name">Mix Vegetable</span></div><p class="item-desc">Seasonal mixed vegetables.</p></li>
+          <li><div class="item-top"><span class="item-name">Sweet &amp; Sour</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Crisp, with pineapple, bell pepper and onion.</p></li>
+          <li><div class="item-top"><span class="item-name">Broccoli</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Fresh broccoli in a savory brown sauce.</p></li>
+          <li><div class="item-top"><span class="item-name">Mongolian</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Scallions and onion in a sweet soy glaze.</p></li>
+          <li><div class="item-top"><span class="item-name">Kung Pao</span> <span class="tag tag-hot">Spicy</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Peanuts, bell pepper, carrot and chili.</p></li>
+          <li><div class="item-top"><span class="item-name">Szechwan</span> <span class="tag tag-hot">Spicy</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Chili-garlic sauce with mixed vegetables.</p></li>
+          <li><div class="item-top"><span class="item-name">Hunan</span> <span class="tag tag-hot">Spicy</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Classic Hunan-style, bold and savory.</p></li>
+          <li><div class="item-top"><span class="item-name">Curry</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Onion, bell pepper and carrot in curry sauce.</p></li>
+          <li><div class="item-top"><span class="item-name">Garlic</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Heavy on the garlic, in a light brown sauce.</p></li>
+          <li><div class="item-top"><span class="item-name">Almond</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Almond gravy, finished with almond slivers.</p></li>
+          <li><div class="item-top"><span class="item-name">Snow Peas</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Crisp snow peas and carrot.</p></li>
+          <li><div class="item-top"><span class="item-name">Mix Vegetable</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Seasonal mixed vegetables.</p></li>
         </ul>
       </div>
     </section>
 
     <section class="course" id="dimsum">
       <div class="inner">
-        <div class="course-head"><h2>Dim Sum</h2><span class="cjk">點心</span></div>
+        <div class="course-head"><h2>Dim Sum</h2><span class="cjk" lang="zh-Hant">點心</span></div>
         <ul class="items">
-          <li><div class="item-top"><span class="item-name">Steam Siu Mai</span> <span class="item-lead"></span><span class="item-price">$10.75</span></div><p class="item-desc">Eight pieces. Pork, shrimp and mushroom.</p></li>
-          <li><div class="item-top"><span class="item-name">Fried Siu Mai</span></div><p class="item-desc">Eight pieces, fried until the pleated edges go crisp.</p></li>
+          <li><div class="item-top"><span class="item-name">Steam Siu Mai</span><span class="item-price">$10.75</span></div><p class="item-desc">Eight pieces. Pork, shrimp and mushroom.</p></li>
+          <li><div class="item-top"><span class="item-name">Fried Siu Mai</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Eight pieces, fried until the pleated edges go crisp.</p></li>
         </ul>
       </div>
     </section>
 
     <section class="course" id="appetizers">
       <div class="inner">
-        <div class="course-head"><h2>Appetizers</h2><span class="cjk">前菜</span></div>
+        <div class="course-head"><h2>Appetizers</h2><span class="cjk" lang="zh-Hant">前菜</span></div>
         <ul class="items">
-          <li><div class="item-top"><span class="item-name">Appetizer Platter</span> <span class="item-lead"></span><span class="item-price">$12.59</span></div><p class="item-desc">Three fried prawns, three foil chicken, three crab puff.</p></li>
-          <li><div class="item-top"><span class="item-name">Potstickers</span> <span class="tag tag-love">94% liked</span> <span class="item-lead"></span><span class="item-price">$11.45</span></div><p class="item-desc">Six pieces, pan fried.</p></li>
-          <li><div class="item-top"><span class="item-name">Egg Rolls</span> <span class="tag tag-love">92% liked</span> <span class="item-lead"></span><span class="item-price">$10.98</span></div><p class="item-desc">Six golden rolls with seasoned vegetables and meat.</p></li>
-          <li><div class="item-top"><span class="item-name">Foil Wrapped Chicken</span> <span class="item-lead"></span><span class="item-price">$10.52</span></div><p class="item-desc">Six pieces, marinated and wrapped in foil.</p></li>
-          <li><div class="item-top"><span class="item-name">Crab Puff</span> <span class="item-lead"></span><span class="item-price">$10.06</span></div><p class="item-desc">Six pieces, with sweet and sour sauce.</p></li>
-          <li><div class="item-top"><span class="item-name">Fried Wonton Skins</span> <span class="item-lead"></span><span class="item-price">$8.68</span></div><p class="item-desc">Ten crisp wrappers with sweet and sour sauce.</p></li>
-          <li><div class="item-top"><span class="item-name">Fried Prawns</span></div><p class="item-desc">Ten lightly breaded prawns, fried golden.</p></li>
-          <li><div class="item-top"><span class="item-name">Fried Calamari</span></div><p class="item-desc">Crisp battered rings with a marinara drizzle.</p></li>
+          <li><div class="item-top"><span class="item-name">Appetizer Platter</span><span class="item-price">$12.59</span></div><p class="item-desc">Three fried prawns, three foil chicken, three crab puff.</p></li>
+          <li><div class="item-top"><span class="item-name">Potstickers</span> <span class="tag tag-love">94% liked</span><span class="item-price">$11.45</span></div><p class="item-desc">Six pieces, pan fried.</p></li>
+          <li><div class="item-top"><span class="item-name">Egg Rolls</span> <span class="tag tag-love">92% liked</span><span class="item-price">$10.98</span></div><p class="item-desc">Six golden rolls with seasoned vegetables and meat.</p></li>
+          <li><div class="item-top"><span class="item-name">Foil Wrapped Chicken</span><span class="item-price">$10.52</span></div><p class="item-desc">Six pieces, marinated and wrapped in foil.</p></li>
+          <li><div class="item-top"><span class="item-name">Crab Puff</span><span class="item-price">$10.06</span></div><p class="item-desc">Six pieces, with sweet and sour sauce.</p></li>
+          <li><div class="item-top"><span class="item-name">Fried Wonton Skins</span><span class="item-price">$8.68</span></div><p class="item-desc">Ten crisp wrappers with sweet and sour sauce.</p></li>
+          <li><div class="item-top"><span class="item-name">Fried Prawns</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Ten lightly breaded prawns, fried golden.</p></li>
+          <li><div class="item-top"><span class="item-name">Fried Calamari</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Crisp battered rings with a marinara drizzle.</p></li>
         </ul>
       </div>
     </section>
 
     <section class="course" id="soups">
       <div class="inner">
-        <div class="course-head"><h2>Soups</h2><span class="cjk">湯</span></div>
+        <div class="course-head"><h2>Soups</h2><span class="cjk" lang="zh-Hant">湯</span></div>
         <ul class="items">
-          <li><div class="item-top"><span class="item-name">Wonton Soup</span> <span class="tag tag-love">96% liked</span> <span class="item-lead"></span><span class="item-price">$11.67</span></div><p class="item-desc">Savory broth, delicate wontons, green onion.</p></li>
-          <li><div class="item-top"><span class="item-name">Wor Wonton Soup</span> <span class="item-lead"></span><span class="item-price">$14.08</span></div><p class="item-desc">The loaded version, with meat and vegetables.</p></li>
-          <li><div class="item-top"><span class="item-name">Egg Flower Soup</span> <span class="item-lead"></span><span class="item-price">$11.98</span></div><p class="item-desc">Beaten egg ribboned through a savory broth.</p></li>
-          <li><div class="item-top"><span class="item-name">Chicken Corn Soup</span> <span class="item-lead"></span><span class="item-price">$11.33</span></div><p class="item-desc">Thick, sweet corn and shredded chicken.</p></li>
-          <li><div class="item-top"><span class="item-name">Seaweed Soup</span> <span class="item-lead"></span><span class="item-price">$12.36</span></div><p class="item-desc">Imitation crab meat, shrimp and seaweed in clear broth.</p></li>
-          <li><div class="item-top"><span class="item-name">Seafood Soup</span> <span class="item-lead"></span><span class="item-price">$13.80</span></div><p class="item-desc">A medley of the day's catch in a flavorful broth.</p></li>
-          <li><div class="item-top"><span class="item-name">Hot &amp; Sour Soup</span> <span class="tag tag-hot">Spicy</span> <span class="tag tag-love">94% liked</span></div><p class="item-desc">Chicken. Sharp, peppery and thick.</p></li>
-          <li><div class="item-top"><span class="item-name">Sizzling Rice Soup</span></div><p class="item-desc">Chicken and shrimp, with crisp rice added at the table.</p></li>
-          <li><div class="item-top"><span class="item-name">West Lake Beef Soup</span></div><p class="item-desc">Minced beef, egg white, mushroom and cilantro.</p></li>
+          <li><div class="item-top"><span class="item-name">Wonton Soup</span> <span class="tag tag-love">96% liked</span><span class="item-price">$11.67</span></div><p class="item-desc">Savory broth, delicate wontons, green onion.</p></li>
+          <li><div class="item-top"><span class="item-name">Wor Wonton Soup</span><span class="item-price">$14.08</span></div><p class="item-desc">The loaded version, with meat and vegetables.</p></li>
+          <li><div class="item-top"><span class="item-name">Egg Flower Soup</span><span class="item-price">$11.98</span></div><p class="item-desc">Beaten egg ribboned through a savory broth.</p></li>
+          <li><div class="item-top"><span class="item-name">Chicken Corn Soup</span><span class="item-price">$11.33</span></div><p class="item-desc">Thick, sweet corn and shredded chicken.</p></li>
+          <li><div class="item-top"><span class="item-name">Seaweed Soup</span><span class="item-price">$12.36</span></div><p class="item-desc">Imitation crab meat, shrimp and seaweed in clear broth.</p></li>
+          <li><div class="item-top"><span class="item-name">Seafood Soup</span><span class="item-price">$13.80</span></div><p class="item-desc">A medley of the day's catch in a flavorful broth.</p></li>
+          <li><div class="item-top"><span class="item-name">Hot &amp; Sour Soup</span> <span class="tag tag-hot">Spicy</span> <span class="tag tag-love">94% liked</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Chicken. Sharp, peppery and thick.</p></li>
+          <li><div class="item-top"><span class="item-name">Sizzling Rice Soup</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Chicken and shrimp, with crisp rice added at the table.</p></li>
+          <li><div class="item-top"><span class="item-name">West Lake Beef Soup</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Minced beef, egg white, mushroom and cilantro.</p></li>
         </ul>
       </div>
     </section>
 
     <section class="course" id="chicken">
       <div class="inner">
-        <div class="course-head"><h2>Chicken</h2><span class="cjk">雞</span></div>
+        <div class="course-head"><h2>Chicken</h2><span class="cjk" lang="zh-Hant">雞</span></div>
         <ul class="items">
-          <li><div class="item-top"><span class="item-name">Orange Chicken</span> <span class="tag tag-love">94% liked</span></div><p class="item-desc">Crisp chicken in a bright, tangy orange sauce.</p></li>
-          <li><div class="item-top"><span class="item-name">House Special Chicken</span> <span class="tag tag-hot">Spicy</span> <span class="tag tag-love">98% liked</span></div><p class="item-desc">The kitchen's own, and one of the best rated things we make.</p></li>
-          <li><div class="item-top"><span class="item-name">Kung Pao Chicken</span> <span class="tag tag-hot">Spicy</span> <span class="item-lead"></span><span class="item-price">$13.28</span></div><p class="item-desc">Bell pepper, onion, carrot and peanuts.</p></li>
-          <li><div class="item-top"><span class="item-name">Sesame Chicken</span> <span class="item-lead"></span><span class="item-price">$13.40</span></div><p class="item-desc">Glazed and finished with toasted sesame.</p></li>
-          <li><div class="item-top"><span class="item-name">Chicken with Black Bean Sauce</span> <span class="item-lead"></span><span class="item-price">$13.17</span></div><p class="item-desc">Stir fried with onion and green pepper.</p></li>
-          <li><div class="item-top"><span class="item-name">Hunan Chicken</span> <span class="tag tag-hot">Spicy</span> <span class="item-lead"></span><span class="item-price">$12.82</span></div><p class="item-desc">Bold Hunan-style chili and garlic.</p></li>
-          <li><div class="item-top"><span class="item-name">Sweet &amp; Sour Chicken</span> <span class="tag tag-love">93% liked</span></div><p class="item-desc">Pineapple, bell pepper and onion.</p></li>
-          <li><div class="item-top"><span class="item-name">Broccoli Chicken</span></div><p class="item-desc">Tender chicken with fresh broccoli.</p></li>
-          <li><div class="item-top"><span class="item-name">Almond Chicken</span></div><p class="item-desc">Crisp chicken in homemade almond gravy.</p></li>
-          <li><div class="item-top"><span class="item-name">Cashew Nut Chicken</span></div><p class="item-desc">Zucchini, water chestnut and cashews in brown sauce.</p></li>
-          <li><div class="item-top"><span class="item-name">Spicy Basil Chicken</span> <span class="tag tag-hot">Spicy</span></div><p class="item-desc">Fresh basil, chili and garlic.</p></li>
-          <li><div class="item-top"><span class="item-name">Szechuan Chicken</span> <span class="tag tag-hot">Spicy</span></div><p class="item-desc">Chili-garlic sauce with mixed vegetables.</p></li>
-          <li><div class="item-top"><span class="item-name">Mongolian Chicken</span></div><p class="item-desc">Scallion and onion in a sweet soy glaze.</p></li>
-          <li><div class="item-top"><span class="item-name">Curry Chicken</span> <span class="tag tag-hot">Spicy</span></div><p class="item-desc">Onion, bell pepper and carrot in curry sauce.</p></li>
-          <li><div class="item-top"><span class="item-name">Lemon Chicken</span></div><p class="item-desc">Sliced breast in a bright lemon sauce.</p></li>
+          <li><div class="item-top"><span class="item-name">Orange Chicken</span> <span class="tag tag-love">94% liked</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Crisp chicken in a bright, tangy orange sauce.</p></li>
+          <li><div class="item-top"><span class="item-name">House Special Chicken</span> <span class="tag tag-hot">Spicy</span> <span class="tag tag-love">98% liked</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">The kitchen's own, and one of the best rated things we make.</p></li>
+          <li><div class="item-top"><span class="item-name">Kung Pao Chicken</span> <span class="tag tag-hot">Spicy</span><span class="item-price">$13.28</span></div><p class="item-desc">Bell pepper, onion, carrot and peanuts.</p></li>
+          <li><div class="item-top"><span class="item-name">Sesame Chicken</span><span class="item-price">$13.40</span></div><p class="item-desc">Glazed and finished with toasted sesame.</p></li>
+          <li><div class="item-top"><span class="item-name">Chicken with Black Bean Sauce</span><span class="item-price">$13.17</span></div><p class="item-desc">Stir fried with onion and green pepper.</p></li>
+          <li><div class="item-top"><span class="item-name">Hunan Chicken</span> <span class="tag tag-hot">Spicy</span><span class="item-price">$12.82</span></div><p class="item-desc">Bold Hunan-style chili and garlic.</p></li>
+          <li><div class="item-top"><span class="item-name">Sweet &amp; Sour Chicken</span> <span class="tag tag-love">93% liked</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Pineapple, bell pepper and onion.</p></li>
+          <li><div class="item-top"><span class="item-name">Broccoli Chicken</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Tender chicken with fresh broccoli.</p></li>
+          <li><div class="item-top"><span class="item-name">Almond Chicken</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Crisp chicken in homemade almond gravy.</p></li>
+          <li><div class="item-top"><span class="item-name">Cashew Nut Chicken</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Zucchini, water chestnut and cashews in brown sauce.</p></li>
+          <li><div class="item-top"><span class="item-name">Spicy Basil Chicken</span> <span class="tag tag-hot">Spicy</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Fresh basil, chili and garlic.</p></li>
+          <li><div class="item-top"><span class="item-name">Szechuan Chicken</span> <span class="tag tag-hot">Spicy</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Chili-garlic sauce with mixed vegetables.</p></li>
+          <li><div class="item-top"><span class="item-name">Mongolian Chicken</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Scallion and onion in a sweet soy glaze.</p></li>
+          <li><div class="item-top"><span class="item-name">Curry Chicken</span> <span class="tag tag-hot">Spicy</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Onion, bell pepper and carrot in curry sauce.</p></li>
+          <li><div class="item-top"><span class="item-name">Lemon Chicken</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Sliced breast in a bright lemon sauce.</p></li>
         </ul>
       </div>
     </section>
 
     <section class="course" id="wings">
       <div class="inner">
-        <div class="course-head"><h2>Chicken Wings</h2><span class="cjk">雞翅</span></div>
+        <div class="course-head"><h2>Chicken Wings</h2><span class="cjk" lang="zh-Hant">雞翅</span></div>
         <ul class="items">
-          <li><div class="item-top"><span class="item-name">Amazing Wings</span> <span class="tag tag-hot">Spicy</span> <span class="item-lead"></span><span class="item-price">$13.75</span></div><p class="item-desc">Eight wings, dry seasoned Korean style.</p></li>
-          <li><div class="item-top"><span class="item-name">Salt &amp; Pepper Chicken Wings</span> <span class="item-lead"></span><span class="item-price">$14.45</span></div><p class="item-desc">Eight wings, fried with salt, pepper and chili.</p></li>
-          <li><div class="item-top"><span class="item-name">Fried Chicken Wings</span> <span class="item-lead"></span><span class="item-price">$14.43</span></div><p class="item-desc">Ten wings, plain and golden.</p></li>
-          <li><div class="item-top"><span class="item-name">Chef Special Chicken Wings</span></div><p class="item-desc">Eight wings, the kitchen's own seasoning.</p></li>
-          <li><div class="item-top"><span class="item-name">Dry Style Szechwan Wings</span> <span class="tag tag-hot">Spicy</span></div><p class="item-desc">Eight wings, dry tossed in Szechwan spice.</p></li>
-          <li><div class="item-top"><span class="item-name">Mandarin Chicken Wings</span></div><p class="item-desc">Eight wings in a sweet mandarin glaze.</p></li>
+          <li><div class="item-top"><span class="item-name">Amazing Wings</span> <span class="tag tag-hot">Spicy</span><span class="item-price">$13.75</span></div><p class="item-desc">Eight wings, dry seasoned Korean style.</p></li>
+          <li><div class="item-top"><span class="item-name">Salt &amp; Pepper Chicken Wings</span><span class="item-price">$14.45</span></div><p class="item-desc">Eight wings, fried with salt, pepper and chili.</p></li>
+          <li><div class="item-top"><span class="item-name">Fried Chicken Wings</span><span class="item-price">$14.43</span></div><p class="item-desc">Ten wings, plain and golden.</p></li>
+          <li><div class="item-top"><span class="item-name">Chef Special Chicken Wings</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Eight wings, the kitchen's own seasoning.</p></li>
+          <li><div class="item-top"><span class="item-name">Dry Style Szechwan Wings</span> <span class="tag tag-hot">Spicy</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Eight wings, dry tossed in Szechwan spice.</p></li>
+          <li><div class="item-top"><span class="item-name">Mandarin Chicken Wings</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Eight wings in a sweet mandarin glaze.</p></li>
         </ul>
       </div>
     </section>
 
     <section class="course" id="beef">
       <div class="inner">
-        <div class="course-head"><h2>Beef</h2><span class="cjk">牛</span></div>
+        <div class="course-head"><h2>Beef</h2><span class="cjk" lang="zh-Hant">牛</span></div>
         <ul class="items">
-          <li><div class="item-top"><span class="item-name">Broccoli Beef</span> <span class="tag tag-love">98% liked</span> <span class="item-lead"></span><span class="item-price">$13.97</span></div><p class="item-desc">Tender beef and fresh broccoli in brown sauce.</p></li>
-          <li><div class="item-top"><span class="item-name">Beef with Green Beans</span> <span class="item-lead"></span><span class="item-price">$14.43</span></div><p class="item-desc">Crisp green beans and garlic.</p></li>
-          <li><div class="item-top"><span class="item-name">Mongolian Beef</span> <span class="item-lead"></span><span class="item-price">$15.05</span></div><p class="item-desc">Scallion and onion in a sweet soy glaze.</p></li>
-          <li><div class="item-top"><span class="item-name">Chef Special Beef</span> <span class="item-lead"></span><span class="item-price">$14.89</span></div><p class="item-desc">The kitchen's own preparation.</p></li>
-          <li><div class="item-top"><span class="item-name">Snow Peas with Beef</span> <span class="item-lead"></span><span class="item-price">$14.66</span></div><p class="item-desc">Crisp snow peas and carrot.</p></li>
-          <li><div class="item-top"><span class="item-name">Beef with Mix Vegetable Deluxe</span> <span class="item-lead"></span><span class="item-price">$14.32</span></div><p class="item-desc">Pea pods, mushroom, broccoli, carrot, water chestnut and Chinese greens.</p></li>
-          <li><div class="item-top"><span class="item-name">Bok Choy with Beef</span> <span class="item-lead"></span><span class="item-price">$14.09</span></div><p class="item-desc">Sliced beef and bok choy in brown sauce.</p></li>
-          <li><div class="item-top"><span class="item-name">Kung Pao Beef</span> <span class="tag tag-hot">Spicy</span></div><p class="item-desc">Bell pepper, onion, carrot and peanuts.</p></li>
-          <li><div class="item-top"><span class="item-name">Moo Shu Beef</span></div><p class="item-desc">With egg and vegetables, served with pancakes.</p></li>
-          <li><div class="item-top"><span class="item-name">Sesame Beef</span></div><p class="item-desc">Tender strips in a savory sesame glaze.</p></li>
-          <li><div class="item-top"><span class="item-name">Curry Beef</span> <span class="tag tag-hot">Spicy</span></div><p class="item-desc">Green pepper, carrot and onion in curry sauce.</p></li>
-          <li><div class="item-top"><span class="item-name">Hunan Beef</span> <span class="tag tag-hot">Spicy</span></div><p class="item-desc">Bold Hunan-style chili and garlic.</p></li>
-          <li><div class="item-top"><span class="item-name">Szechuan Beef</span> <span class="tag tag-hot">Spicy</span></div><p class="item-desc">Chili-garlic sauce with mixed vegetables.</p></li>
-          <li><div class="item-top"><span class="item-name">Beef with Black Pepper</span></div><p class="item-desc">Heavy on the cracked pepper.</p></li>
-          <li><div class="item-top"><span class="item-name">Beef with Oyster Sauce</span></div><p class="item-desc">Sliced beef and crisp vegetables in rich oyster sauce.</p></li>
+          <li><div class="item-top"><span class="item-name">Broccoli Beef</span> <span class="tag tag-love">98% liked</span><span class="item-price">$13.97</span></div><p class="item-desc">Tender beef and fresh broccoli in brown sauce.</p></li>
+          <li><div class="item-top"><span class="item-name">Beef with Green Beans</span><span class="item-price">$14.43</span></div><p class="item-desc">Crisp green beans and garlic.</p></li>
+          <li><div class="item-top"><span class="item-name">Mongolian Beef</span><span class="item-price">$15.05</span></div><p class="item-desc">Scallion and onion in a sweet soy glaze.</p></li>
+          <li><div class="item-top"><span class="item-name">Chef Special Beef</span><span class="item-price">$14.89</span></div><p class="item-desc">The kitchen's own preparation.</p></li>
+          <li><div class="item-top"><span class="item-name">Snow Peas with Beef</span><span class="item-price">$14.66</span></div><p class="item-desc">Crisp snow peas and carrot.</p></li>
+          <li><div class="item-top"><span class="item-name">Beef with Mix Vegetable Deluxe</span><span class="item-price">$14.32</span></div><p class="item-desc">Pea pods, mushroom, broccoli, carrot, water chestnut and Chinese greens.</p></li>
+          <li><div class="item-top"><span class="item-name">Bok Choy with Beef</span><span class="item-price">$14.09</span></div><p class="item-desc">Sliced beef and bok choy in brown sauce.</p></li>
+          <li><div class="item-top"><span class="item-name">Kung Pao Beef</span> <span class="tag tag-hot">Spicy</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Bell pepper, onion, carrot and peanuts.</p></li>
+          <li><div class="item-top"><span class="item-name">Moo Shu Beef</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">With egg and vegetables, served with pancakes.</p></li>
+          <li><div class="item-top"><span class="item-name">Sesame Beef</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Tender strips in a savory sesame glaze.</p></li>
+          <li><div class="item-top"><span class="item-name">Curry Beef</span> <span class="tag tag-hot">Spicy</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Green pepper, carrot and onion in curry sauce.</p></li>
+          <li><div class="item-top"><span class="item-name">Hunan Beef</span> <span class="tag tag-hot">Spicy</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Bold Hunan-style chili and garlic.</p></li>
+          <li><div class="item-top"><span class="item-name">Szechuan Beef</span> <span class="tag tag-hot">Spicy</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Chili-garlic sauce with mixed vegetables.</p></li>
+          <li><div class="item-top"><span class="item-name">Beef with Black Pepper</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Heavy on the cracked pepper.</p></li>
+          <li><div class="item-top"><span class="item-name">Beef with Oyster Sauce</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Sliced beef and crisp vegetables in rich oyster sauce.</p></li>
         </ul>
       </div>
     </section>
 
     <section class="course" id="pork">
       <div class="inner">
-        <div class="course-head"><h2>Pork</h2><span class="cjk">豬</span></div>
+        <div class="course-head"><h2>Pork</h2><span class="cjk" lang="zh-Hant">豬</span></div>
         <ul class="items">
-          <li><div class="item-top"><span class="item-name">Salt &amp; Pepper Pork Chop</span> <span class="tag tag-love">94% liked</span></div><p class="item-desc">Fried chops tossed with salt, pepper and chili.</p></li>
-          <li><div class="item-top"><span class="item-name">Sweet &amp; Sour Pork</span> <span class="tag tag-love">96% liked</span></div><p class="item-desc">Pineapple, bell pepper and onion.</p></li>
-          <li><div class="item-top"><span class="item-name">Moo Shu Pork</span></div><p class="item-desc">Shredded cabbage, egg and green onion, served with pancakes.</p></li>
-          <li><div class="item-top"><span class="item-name">Peking Sauce Pork Chop</span></div><p class="item-desc">Breaded and fried, in a sweet and savory Peking sauce.</p></li>
-          <li><div class="item-top"><span class="item-name">Pork with Spicy Garlic Sauce</span> <span class="tag tag-hot">Spicy</span></div><p class="item-desc">Garlic-forward, with real heat.</p></li>
-          <li><div class="item-top"><span class="item-name">Dry Braised Pork</span></div><p class="item-desc">Braised down until the sauce clings.</p></li>
+          <li><div class="item-top"><span class="item-name">Salt &amp; Pepper Pork Chop</span> <span class="tag tag-love">94% liked</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Fried chops tossed with salt, pepper and chili.</p></li>
+          <li><div class="item-top"><span class="item-name">Sweet &amp; Sour Pork</span> <span class="tag tag-love">96% liked</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Pineapple, bell pepper and onion.</p></li>
+          <li><div class="item-top"><span class="item-name">Moo Shu Pork</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Shredded cabbage, egg and green onion, served with pancakes.</p></li>
+          <li><div class="item-top"><span class="item-name">Peking Sauce Pork Chop</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Breaded and fried, in a sweet and savory Peking sauce.</p></li>
+          <li><div class="item-top"><span class="item-name">Pork with Spicy Garlic Sauce</span> <span class="tag tag-hot">Spicy</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Garlic-forward, with real heat.</p></li>
+          <li><div class="item-top"><span class="item-name">Dry Braised Pork</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Braised down until the sauce clings.</p></li>
         </ul>
       </div>
     </section>
 
     <section class="course" id="seafood">
       <div class="inner">
-        <div class="course-head"><h2>Seafood</h2><span class="cjk">海鮮</span></div>
+        <div class="course-head"><h2>Seafood</h2><span class="cjk" lang="zh-Hant">海鮮</span></div>
         <ul class="items">
-          <li><div class="item-top"><span class="item-name">Honey Walnut Prawns</span> <span class="tag tag-love">97% liked</span> <span class="item-lead"></span><span class="item-price">$17.19</span></div><p class="item-desc">Our most ordered dish. Crisp prawns, light honey glaze, candied walnuts.</p></li>
-          <li><div class="item-top"><span class="item-name">Three Kinds of Seafood Deluxe</span> <span class="item-lead"></span><span class="item-price">$19.55</span></div><p class="item-desc">Shrimp, scallop and calamari.</p></li>
-          <li><div class="item-top"><span class="item-name">Fish with Braised Tofu</span> <span class="item-lead"></span><span class="item-price">$17.30</span></div><p class="item-desc">Fish fillet braised with tofu, chili, peanuts and cilantro.</p></li>
-          <li><div class="item-top"><span class="item-name">Happy Family</span> <span class="item-lead"></span><span class="item-price">$16.63</span></div><p class="item-desc">Beef, chicken, shrimp, BBQ pork, calamari and vegetables.</p></li>
-          <li><div class="item-top"><span class="item-name">Salt &amp; Pepper Fish</span> <span class="item-lead"></span><span class="item-price">$16.52</span></div><p class="item-desc">Fried fillet with salt, pepper and chili.</p></li>
-          <li><div class="item-top"><span class="item-name">Fish with Black Bean Sauce</span> <span class="item-lead"></span><span class="item-price">$16.52</span></div><p class="item-desc">Fillet in a savory fermented black bean sauce.</p></li>
-          <li><div class="item-top"><span class="item-name">Green Beans with Prawns</span> <span class="item-lead"></span><span class="item-price">$16.18</span></div><p class="item-desc">Green beans, carrot and white onion in black bean sauce.</p></li>
-          <li><div class="item-top"><span class="item-name">Salt &amp; Pepper Prawns</span> <span class="item-lead"></span><span class="item-price">$15.96</span></div><p class="item-desc">Shell-on, fried with salt, pepper and chili.</p></li>
-          <li><div class="item-top"><span class="item-name">Kung Pao Prawns</span> <span class="tag tag-hot">Spicy</span> <span class="item-lead"></span><span class="item-price">$15.29</span></div><p class="item-desc">Bell pepper, onion, carrot and peanuts.</p></li>
-          <li><div class="item-top"><span class="item-name">Salt &amp; Pepper Calamari</span> <span class="tag tag-love">89% liked</span></div><p class="item-desc">Crisp rings with salt, pepper and chili.</p></li>
-          <li><div class="item-top"><span class="item-name">Kung Pao Three Kinds</span> <span class="tag tag-hot">Spicy</span></div><p class="item-desc">Beef, chicken and shrimp.</p></li>
-          <li><div class="item-top"><span class="item-name">Shrimp with Lobster Sauce</span></div><p class="item-desc">Minced pork, peas, carrot and mushroom in creamy egg sauce.</p></li>
-          <li><div class="item-top"><span class="item-name">Garlic Prawns</span></div><p class="item-desc">Heavy on the garlic, in a light brown sauce.</p></li>
-          <li><div class="item-top"><span class="item-name">Broccoli Prawns</span></div><p class="item-desc">Fresh broccoli in a savory sauce.</p></li>
-          <li><div class="item-top"><span class="item-name">Snow Peas with Prawns</span></div><p class="item-desc">Crisp snow peas and carrot.</p></li>
-          <li><div class="item-top"><span class="item-name">Cashew Nut Prawns</span></div><p class="item-desc">Water chestnut, zucchini and cashews.</p></li>
-          <li><div class="item-top"><span class="item-name">Almond Prawns</span></div><p class="item-desc">Almond gravy, finished with almond slivers.</p></li>
-          <li><div class="item-top"><span class="item-name">Curry Prawns</span> <span class="tag tag-hot">Spicy</span></div><p class="item-desc">Green pepper, onion and carrot in curry sauce.</p></li>
-          <li><div class="item-top"><span class="item-name">Sweet &amp; Sour Prawns</span></div><p class="item-desc">Pineapple, bell pepper and onion.</p></li>
-          <li><div class="item-top"><span class="item-name">Mix Vegetable with Prawns</span></div><p class="item-desc">Seasonal mixed vegetables.</p></li>
+          <li><div class="item-top"><span class="item-name">Honey Walnut Prawns</span> <span class="tag tag-love">97% liked</span><span class="item-price">$17.19</span></div><p class="item-desc">Our most ordered dish. Crisp prawns, light honey glaze, candied walnuts.</p></li>
+          <li><div class="item-top"><span class="item-name">Three Kinds of Seafood Deluxe</span><span class="item-price">$19.55</span></div><p class="item-desc">Shrimp, scallop and calamari.</p></li>
+          <li><div class="item-top"><span class="item-name">Fish with Braised Tofu</span><span class="item-price">$17.30</span></div><p class="item-desc">Fish fillet braised with tofu, chili, peanuts and cilantro.</p></li>
+          <li><div class="item-top"><span class="item-name">Happy Family</span><span class="item-price">$16.63</span></div><p class="item-desc">Beef, chicken, shrimp, BBQ pork, calamari and vegetables.</p></li>
+          <li><div class="item-top"><span class="item-name">Salt &amp; Pepper Fish</span><span class="item-price">$16.52</span></div><p class="item-desc">Fried fillet with salt, pepper and chili.</p></li>
+          <li><div class="item-top"><span class="item-name">Fish with Black Bean Sauce</span><span class="item-price">$16.52</span></div><p class="item-desc">Fillet in a savory fermented black bean sauce.</p></li>
+          <li><div class="item-top"><span class="item-name">Green Beans with Prawns</span><span class="item-price">$16.18</span></div><p class="item-desc">Green beans, carrot and white onion in black bean sauce.</p></li>
+          <li><div class="item-top"><span class="item-name">Salt &amp; Pepper Prawns</span><span class="item-price">$15.96</span></div><p class="item-desc">Shell-on, fried with salt, pepper and chili.</p></li>
+          <li><div class="item-top"><span class="item-name">Kung Pao Prawns</span> <span class="tag tag-hot">Spicy</span><span class="item-price">$15.29</span></div><p class="item-desc">Bell pepper, onion, carrot and peanuts.</p></li>
+          <li><div class="item-top"><span class="item-name">Salt &amp; Pepper Calamari</span> <span class="tag tag-love">89% liked</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Crisp rings with salt, pepper and chili.</p></li>
+          <li><div class="item-top"><span class="item-name">Kung Pao Three Kinds</span> <span class="tag tag-hot">Spicy</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Beef, chicken and shrimp.</p></li>
+          <li><div class="item-top"><span class="item-name">Shrimp with Lobster Sauce</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Minced pork, peas, carrot and mushroom in creamy egg sauce.</p></li>
+          <li><div class="item-top"><span class="item-name">Garlic Prawns</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Heavy on the garlic, in a light brown sauce.</p></li>
+          <li><div class="item-top"><span class="item-name">Broccoli Prawns</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Fresh broccoli in a savory sauce.</p></li>
+          <li><div class="item-top"><span class="item-name">Snow Peas with Prawns</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Crisp snow peas and carrot.</p></li>
+          <li><div class="item-top"><span class="item-name">Cashew Nut Prawns</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Water chestnut, zucchini and cashews.</p></li>
+          <li><div class="item-top"><span class="item-name">Almond Prawns</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Almond gravy, finished with almond slivers.</p></li>
+          <li><div class="item-top"><span class="item-name">Curry Prawns</span> <span class="tag tag-hot">Spicy</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Green pepper, onion and carrot in curry sauce.</p></li>
+          <li><div class="item-top"><span class="item-name">Sweet &amp; Sour Prawns</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Pineapple, bell pepper and onion.</p></li>
+          <li><div class="item-top"><span class="item-name">Mix Vegetable with Prawns</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Seasonal mixed vegetables.</p></li>
         </ul>
       </div>
     </section>
 
     <section class="course" id="vegetables">
       <div class="inner">
-        <div class="course-head"><h2>Vegetables &amp; Tofu</h2><span class="cjk">素菜</span></div>
+        <div class="course-head"><h2>Vegetables &amp; Tofu</h2><span class="cjk" lang="zh-Hant">素菜</span></div>
         <ul class="items">
-          <li><div class="item-top"><span class="item-name">Mix Vegetable Deluxe</span> <span class="item-lead"></span><span class="item-price">$12.95</span></div><p class="item-desc">Broccoli, mushroom, baby corn, snow peas and bamboo shoots.</p></li>
-          <li><div class="item-top"><span class="item-name">Mix Vegetable</span> <span class="item-lead"></span><span class="item-price">$13.05</span></div><p class="item-desc">Assorted vegetables in a light garlic sauce.</p></li>
-          <li><div class="item-top"><span class="item-name">Saut&eacute;ed Broccoli</span> <span class="item-lead"></span><span class="item-price">$12.25</span></div><p class="item-desc">Simple, fresh and green.</p></li>
-          <li><div class="item-top"><span class="item-name">Dry Braised Green Beans</span> <span class="tag tag-love">96% liked</span></div><p class="item-desc">Blistered green beans braised until the sauce clings.</p></li>
-          <li><div class="item-top"><span class="item-name">Hot and Spicy Eggplant</span> <span class="tag tag-hot">Spicy</span> <span class="tag tag-love">92% liked</span></div><p class="item-desc">Soft eggplant in a garlicky chili sauce.</p></li>
-          <li><div class="item-top"><span class="item-name">Moo Shu Vegetable</span></div><p class="item-desc">Cabbage, mushroom, green onion and egg, with four Mandarin pancakes.</p></li>
-          <li><div class="item-top"><span class="item-name">Ma Po Tofu</span> <span class="tag tag-hot">Spicy</span></div><p class="item-desc">Soft tofu in a numbing chili bean sauce.</p></li>
-          <li><div class="item-top"><span class="item-name">Kung Pao Tofu</span> <span class="tag tag-hot">Spicy</span></div><p class="item-desc">Bell pepper, onion, carrot and peanuts.</p></li>
-          <li><div class="item-top"><span class="item-name">Salt &amp; Pepper Tofu</span></div><p class="item-desc">Fried cubes tossed with salt, pepper and chili.</p></li>
-          <li><div class="item-top"><span class="item-name">Braised Tofu</span></div><p class="item-desc">Braised with vegetables in brown sauce.</p></li>
-          <li><div class="item-top"><span class="item-name">Tofu with Oyster Sauce</span></div><p class="item-desc">Rich oyster sauce over soft tofu.</p></li>
+          <li><div class="item-top"><span class="item-name">Mix Vegetable Deluxe</span><span class="item-price">$12.95</span></div><p class="item-desc">Broccoli, mushroom, baby corn, snow peas and bamboo shoots.</p></li>
+          <li><div class="item-top"><span class="item-name">Mix Vegetable</span><span class="item-price">$13.05</span></div><p class="item-desc">Assorted vegetables in a light garlic sauce.</p></li>
+          <li><div class="item-top"><span class="item-name">Saut&eacute;ed Broccoli</span><span class="item-price">$12.25</span></div><p class="item-desc">Simple, fresh and green.</p></li>
+          <li><div class="item-top"><span class="item-name">Dry Braised Green Beans</span> <span class="tag tag-love">96% liked</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Blistered green beans braised until the sauce clings.</p></li>
+          <li><div class="item-top"><span class="item-name">Hot and Spicy Eggplant</span> <span class="tag tag-hot">Spicy</span> <span class="tag tag-love">92% liked</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Soft eggplant in a garlicky chili sauce.</p></li>
+          <li><div class="item-top"><span class="item-name">Moo Shu Vegetable</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Cabbage, mushroom, green onion and egg, with four Mandarin pancakes.</p></li>
+          <li><div class="item-top"><span class="item-name">Ma Po Tofu</span> <span class="tag tag-hot">Spicy</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Soft tofu in a numbing chili bean sauce.</p></li>
+          <li><div class="item-top"><span class="item-name">Kung Pao Tofu</span> <span class="tag tag-hot">Spicy</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Bell pepper, onion, carrot and peanuts.</p></li>
+          <li><div class="item-top"><span class="item-name">Salt &amp; Pepper Tofu</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Fried cubes tossed with salt, pepper and chili.</p></li>
+          <li><div class="item-top"><span class="item-name">Braised Tofu</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Braised with vegetables in brown sauce.</p></li>
+          <li><div class="item-top"><span class="item-name">Tofu with Oyster Sauce</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Rich oyster sauce over soft tofu.</p></li>
         </ul>
       </div>
     </section>
 
     <section class="course" id="rice">
       <div class="inner">
-        <div class="course-head"><h2>Fried Rice</h2><span class="cjk">炒飯</span></div>
+        <div class="course-head"><h2>Fried Rice</h2><span class="cjk" lang="zh-Hant">炒飯</span></div>
         <p class="course-note">Add XO sauce (spicy) to any fried rice for an additional charge.</p>
         <ul class="items">
-          <li><div class="item-top"><span class="item-name">House Special Fried Rice</span> <span class="tag tag-love">95% liked</span> <span class="item-lead"></span><span class="item-price">$11.27</span></div><p class="item-desc">Chicken, BBQ pork and shrimp.</p></li>
-          <li><div class="item-top"><span class="item-name">BBQ Pork Fried Rice</span> <span class="tag tag-love">92% liked</span> <span class="item-lead"></span><span class="item-price">$10.95</span></div><p class="item-desc">Sweet char siu through seasoned rice.</p></li>
-          <li><div class="item-top"><span class="item-name">Seafood Fried Rice</span> <span class="item-lead"></span><span class="item-price">$15.50</span></div><p class="item-desc">Shrimp, scallop and calamari.</p></li>
-          <li><div class="item-top"><span class="item-name">Steamed Rice</span> <span class="item-lead"></span><span class="item-price">$4.31</span></div><p class="item-desc">Small or large.</p></li>
-          <li><div class="item-top"><span class="item-name">Chicken Fried Rice</span></div><p class="item-desc">Peas, carrot and scrambled egg.</p></li>
-          <li><div class="item-top"><span class="item-name">Beef Fried Rice</span></div><p class="item-desc">Peas, carrot and scrambled egg.</p></li>
-          <li><div class="item-top"><span class="item-name">Shrimp Fried Rice</span></div><p class="item-desc">Shrimp, scrambled egg and green onion.</p></li>
-          <li><div class="item-top"><span class="item-name">Vegetable Fried Rice</span></div><p class="item-desc">Fresh garden vegetables.</p></li>
-          <li><div class="item-top"><span class="item-name">Garlic Fried Rice</span></div><p class="item-desc">Heavy on the garlic.</p></li>
+          <li><div class="item-top"><span class="item-name">House Special Fried Rice</span> <span class="tag tag-love">95% liked</span><span class="item-price">$11.27</span></div><p class="item-desc">Chicken, BBQ pork and shrimp.</p></li>
+          <li><div class="item-top"><span class="item-name">BBQ Pork Fried Rice</span> <span class="tag tag-love">92% liked</span><span class="item-price">$10.95</span></div><p class="item-desc">Sweet char siu through seasoned rice.</p></li>
+          <li><div class="item-top"><span class="item-name">Seafood Fried Rice</span><span class="item-price">$15.50</span></div><p class="item-desc">Shrimp, scallop and calamari.</p></li>
+          <li><div class="item-top"><span class="item-name">Steamed Rice</span><span class="item-price">$4.31</span></div><p class="item-desc">Small or large.</p></li>
+          <li><div class="item-top"><span class="item-name">Chicken Fried Rice</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Peas, carrot and scrambled egg.</p></li>
+          <li><div class="item-top"><span class="item-name">Beef Fried Rice</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Peas, carrot and scrambled egg.</p></li>
+          <li><div class="item-top"><span class="item-name">Shrimp Fried Rice</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Shrimp, scrambled egg and green onion.</p></li>
+          <li><div class="item-top"><span class="item-name">Vegetable Fried Rice</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Fresh garden vegetables.</p></li>
+          <li><div class="item-top"><span class="item-name">Garlic Fried Rice</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Heavy on the garlic.</p></li>
         </ul>
       </div>
     </section>
 
     <section class="course" id="eggfooyoung">
       <div class="inner">
-        <div class="course-head"><h2>Egg Foo Young</h2><span class="cjk">芙蓉蛋</span></div>
+        <div class="course-head"><h2>Egg Foo Young</h2><span class="cjk" lang="zh-Hant">芙蓉蛋</span></div>
         <ul class="items">
-          <li><div class="item-top"><span class="item-name">Combo Egg Foo Young</span> <span class="item-lead"></span><span class="item-price">$13.51</span></div><p class="item-desc">Everything, in one order.</p></li>
-          <li><div class="item-top"><span class="item-name">Chicken Egg Foo Young</span> <span class="item-lead"></span><span class="item-price">$13.45</span></div><p class="item-desc">Egg patties with chicken and vegetables.</p></li>
-          <li><div class="item-top"><span class="item-name">Shrimp Egg Foo Young</span></div><p class="item-desc">Egg patties with shrimp and vegetables.</p></li>
-          <li><div class="item-top"><span class="item-name">BBQ Pork Egg Foo Young</span></div><p class="item-desc">Egg patties with char siu and vegetables.</p></li>
-          <li><div class="item-top"><span class="item-name">Beef Egg Foo Young</span></div><p class="item-desc">Egg patties with beef and vegetables.</p></li>
-          <li><div class="item-top"><span class="item-name">Vegetable Egg Foo Young</span></div><p class="item-desc">Egg patties with mixed vegetables.</p></li>
+          <li><div class="item-top"><span class="item-name">Combo Egg Foo Young</span><span class="item-price">$13.51</span></div><p class="item-desc">Everything, in one order.</p></li>
+          <li><div class="item-top"><span class="item-name">Chicken Egg Foo Young</span><span class="item-price">$13.45</span></div><p class="item-desc">Egg patties with chicken and vegetables.</p></li>
+          <li><div class="item-top"><span class="item-name">Shrimp Egg Foo Young</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Egg patties with shrimp and vegetables.</p></li>
+          <li><div class="item-top"><span class="item-name">BBQ Pork Egg Foo Young</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Egg patties with char siu and vegetables.</p></li>
+          <li><div class="item-top"><span class="item-name">Beef Egg Foo Young</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Egg patties with beef and vegetables.</p></li>
+          <li><div class="item-top"><span class="item-name">Vegetable Egg Foo Young</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Egg patties with mixed vegetables.</p></li>
         </ul>
       </div>
     </section>
 
     <section class="course" id="noodles">
       <div class="inner">
-        <div class="course-head"><h2>Noodles &amp; Chow Fun</h2><span class="cjk">河粉</span></div>
+        <div class="course-head"><h2>Noodles &amp; Chow Fun</h2><span class="cjk" lang="zh-Hant">河粉</span></div>
         <ul class="items">
-          <li><div class="item-top"><span class="item-name">Seafood Pan Fried Noodle</span> <span class="item-lead"></span><span class="item-price">$16.96</span></div><p class="item-desc">Shrimp, scallop and calamari over crisp noodles.</p></li>
-          <li><div class="item-top"><span class="item-name">Combination Chow Fun w/ Gravy</span> <span class="item-lead"></span><span class="item-price">$15.55</span></div><p class="item-desc">Wide rice noodles under gravy with chicken, shrimp, bok choy, broccoli, carrot and baby corn.</p></li>
-          <li><div class="item-top"><span class="item-name">House Special Noodle Soup</span> <span class="tag tag-hot">Spicy</span> <span class="item-lead"></span><span class="item-price">$14.89</span></div><p class="item-desc">Chicken, beef, shrimp and calamari in broth.</p></li>
-          <li><div class="item-top"><span class="item-name">Hong Kong Style Pan Fried Noodle</span> <span class="item-lead"></span><span class="item-price">$14.55</span></div><p class="item-desc">Crisp noodle cake under a savory gravy.</p></li>
-          <li><div class="item-top"><span class="item-name">Singapore Style Rice Noodle</span> <span class="item-lead"></span><span class="item-price">$14.55</span></div><p class="item-desc">Thin rice noodles with shrimp, BBQ pork, onion, bean sprouts and curry.</p></li>
-          <li><div class="item-top"><span class="item-name">House Special Rice Noodle</span> <span class="item-lead"></span><span class="item-price">$14.55</span></div><p class="item-desc">Flat rice noodles with chicken, pork and shrimp.</p></li>
-          <li><div class="item-top"><span class="item-name">Combination Chow Fun</span> <span class="tag tag-love">95% liked</span> <span class="item-lead"></span><span class="item-price">$14.55</span></div><p class="item-desc">Dry fried, with everything.</p></li>
-          <li><div class="item-top"><span class="item-name">Beef Chow Fun (Dry)</span> <span class="tag tag-love">100% liked</span> <span class="item-lead"></span><span class="item-price">$14.20</span></div><p class="item-desc">Wide rice noodles, bean sprouts and scallion.</p></li>
-          <li><div class="item-top"><span class="item-name">Shrimp Chow Fun</span> <span class="tag tag-love">100% liked</span> <span class="item-lead"></span><span class="item-price">$14.20</span></div><p class="item-desc">Flat rice noodles with shrimp and mixed vegetables.</p></li>
-          <li><div class="item-top"><span class="item-name">Chicken Chow Fun</span> <span class="tag tag-love">100% liked</span> <span class="item-lead"></span><span class="item-price">$13.86</span></div><p class="item-desc">Flat rice noodles with chicken and vegetables.</p></li>
-          <li><div class="item-top"><span class="item-name">Noodle with Plum Sauce</span> <span class="item-lead"></span><span class="item-price">$13.55</span></div><p class="item-desc">Korean style, in a savory plum sauce.</p></li>
+          <li><div class="item-top"><span class="item-name">Seafood Pan Fried Noodle</span><span class="item-price">$16.96</span></div><p class="item-desc">Shrimp, scallop and calamari over crisp noodles.</p></li>
+          <li><div class="item-top"><span class="item-name">Combination Chow Fun w/ Gravy</span><span class="item-price">$15.55</span></div><p class="item-desc">Wide rice noodles under gravy with chicken, shrimp, bok choy, broccoli, carrot and baby corn.</p></li>
+          <li><div class="item-top"><span class="item-name">House Special Noodle Soup</span> <span class="tag tag-hot">Spicy</span><span class="item-price">$14.89</span></div><p class="item-desc">Chicken, beef, shrimp and calamari in broth.</p></li>
+          <li><div class="item-top"><span class="item-name">Hong Kong Style Pan Fried Noodle</span><span class="item-price">$14.55</span></div><p class="item-desc">Crisp noodle cake under a savory gravy.</p></li>
+          <li><div class="item-top"><span class="item-name">Singapore Style Rice Noodle</span><span class="item-price">$14.55</span></div><p class="item-desc">Thin rice noodles with shrimp, BBQ pork, onion, bean sprouts and curry.</p></li>
+          <li><div class="item-top"><span class="item-name">House Special Rice Noodle</span><span class="item-price">$14.55</span></div><p class="item-desc">Flat rice noodles with chicken, pork and shrimp.</p></li>
+          <li><div class="item-top"><span class="item-name">Combination Chow Fun</span> <span class="tag tag-love">95% liked</span><span class="item-price">$14.55</span></div><p class="item-desc">Dry fried, with everything.</p></li>
+          <li><div class="item-top"><span class="item-name">Beef Chow Fun (Dry)</span> <span class="tag tag-love">100% liked</span><span class="item-price">$14.20</span></div><p class="item-desc">Wide rice noodles, bean sprouts and scallion.</p></li>
+          <li><div class="item-top"><span class="item-name">Shrimp Chow Fun</span> <span class="tag tag-love">100% liked</span><span class="item-price">$14.20</span></div><p class="item-desc">Flat rice noodles with shrimp and mixed vegetables.</p></li>
+          <li><div class="item-top"><span class="item-name">Chicken Chow Fun</span> <span class="tag tag-love">100% liked</span><span class="item-price">$13.86</span></div><p class="item-desc">Flat rice noodles with chicken and vegetables.</p></li>
+          <li><div class="item-top"><span class="item-name">Noodle with Plum Sauce</span><span class="item-price">$13.55</span></div><p class="item-desc">Korean style, in a savory plum sauce.</p></li>
         </ul>
       </div>
     </section>
 
     <section class="course" id="chowmein">
       <div class="inner">
-        <div class="course-head"><h2>Chow Mein</h2><span class="cjk">炒麵</span></div>
+        <div class="course-head"><h2>Chow Mein</h2><span class="cjk" lang="zh-Hant">炒麵</span></div>
         <ul class="items">
-          <li><div class="item-top"><span class="item-name">House Special Chow Mein</span> <span class="tag tag-love">93% liked</span></div><p class="item-desc">BBQ pork, chicken and shrimp.</p></li>
-          <li><div class="item-top"><span class="item-name">Chicken Chow Mein</span> <span class="tag tag-love">97% liked</span></div><p class="item-desc">Soft egg noodles with chicken and vegetables.</p></li>
-          <li><div class="item-top"><span class="item-name">Shrimp Chow Mein</span> <span class="item-lead"></span><span class="item-price">$11.50</span></div><p class="item-desc">Shrimp with noodles and crisp vegetables.</p></li>
-          <li><div class="item-top"><span class="item-name">BBQ Pork Chow Mein</span> <span class="tag tag-love">100% liked</span></div><p class="item-desc">Sweet char siu through soft noodles.</p></li>
-          <li><div class="item-top"><span class="item-name">Beef Chow Mein</span></div><p class="item-desc">Beef with noodles and vegetables.</p></li>
-          <li><div class="item-top"><span class="item-name">Seafood Chow Mein</span></div><p class="item-desc">Shrimp, scallop and squid.</p></li>
-          <li><div class="item-top"><span class="item-name">Vegetable Chow Mein</span> <span class="tag tag-love">96% liked</span></div><p class="item-desc">Broccoli, snap peas, mushroom and carrot.</p></li>
+          <li><div class="item-top"><span class="item-name">House Special Chow Mein</span> <span class="tag tag-love">93% liked</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">BBQ pork, chicken and shrimp.</p></li>
+          <li><div class="item-top"><span class="item-name">Chicken Chow Mein</span> <span class="tag tag-love">97% liked</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Soft egg noodles with chicken and vegetables.</p></li>
+          <li><div class="item-top"><span class="item-name">Shrimp Chow Mein</span><span class="item-price">$11.50</span></div><p class="item-desc">Shrimp with noodles and crisp vegetables.</p></li>
+          <li><div class="item-top"><span class="item-name">BBQ Pork Chow Mein</span> <span class="tag tag-love">100% liked</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Sweet char siu through soft noodles.</p></li>
+          <li><div class="item-top"><span class="item-name">Beef Chow Mein</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Beef with noodles and vegetables.</p></li>
+          <li><div class="item-top"><span class="item-name">Seafood Chow Mein</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Shrimp, scallop and squid.</p></li>
+          <li><div class="item-top"><span class="item-name">Vegetable Chow Mein</span> <span class="tag tag-love">96% liked</span><span class="item-price ask">Ask in store</span></div><p class="item-desc">Broccoli, snap peas, mushroom and carrot.</p></li>
         </ul>
       </div>
     </section>
 
-    <section style="padding-top:0">
-      <p class="price-note">
-        Prices and dishes may change. Some items are priced in store only &mdash; call
-        <a href="tel:+12098353888">(209) 835-3888</a> and we will tell you the current price.
-        Ordering by phone is always cheaper than ordering through a delivery app.
-      </p>
+    <section class="tail">
+      <div class="inner">
+        <p class="price-note">
+          Prices and dishes may change. Items marked <strong>Ask in store</strong> are priced at the counter &mdash; call
+          <a href="tel:+12098353888" data-place="price-note">(209) 835-3888</a> and we will tell you the current price.
+          Ordering by phone is always cheaper than ordering through a delivery app.
+        </p>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="inner footer-grid">
       <div>
-        <p style="margin:0 0 6px"><strong style="color:var(--paper)">Amazing Kitchen</strong> <span class="cjk">名軒</span></p>
-        <p style="margin:0">2211 N Tracy Blvd, Tracy, CA 95376<br><a href="tel:+12098353888">(209) 835-3888</a></p>
+        <p><strong>Amazing Kitchen</strong> <span class="cjk" lang="zh-Hant">名軒</span></p>
+        <p>2211 N Tracy Blvd, Tracy, CA 95376<br><a href="tel:+12098353888" data-place="footer">(209) 835-3888</a></p>
       </div>
       <div>
-        <p style="margin:0 0 6px">Tuesday &ndash; Sunday, 11am &ndash; 9pm</p>
-        <p style="margin:0">Closed Mondays</p>
+        <p>Tuesday &ndash; Sunday, 11am &ndash; 9pm</p>
+        <p>Closed Mondays</p>
       </div>
       <div>
-        <p style="margin:0 0 6px"><a href="index.html">Home</a></p>
-        <p style="margin:0"><a href="https://www.yelp.com/biz/amazing-kitchen-tracy-3" rel="noopener" target="_blank">Reviews on Yelp</a></p>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="https://www.yelp.com/biz/amazing-kitchen-tracy-3" rel="noopener" target="_blank">Reviews on Yelp</a></p>
       </div>
     </div>
   </footer>
 
   <div class="sticky-call">
-    <a class="btn btn-primary" href="tel:+12098353888">Call to order &middot; (209) 835-3888</a>
+    <a class="btn btn-primary" href="tel:+12098353888" data-place="sticky-bar">Call to order &middot; (209) 835-3888</a>
   </div>
 
   <script src="script.js"></script>

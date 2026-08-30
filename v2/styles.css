@@ -14,6 +14,7 @@
   --font-body: "Karla", "Helvetica Neue", sans-serif;
   --font-cjk: "Noto Serif TC", serif;
   --measure: 62ch;
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.42'/%3E%3C/svg%3E");
   /* Heights of the two sticky bars. Anything that has to clear them reads these. */
   --header-h: 75px;
   --jump-h: 76px; /* two wrapped rows — anchors must clear the taller case */
@@ -41,7 +42,7 @@ body::before {
   pointer-events: none;
   z-index: 1;
   opacity: .35;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.42'/%3E%3C/svg%3E");
+  background-image: var(--grain);
 }
 
 h1, h2, h3 {
@@ -143,25 +144,49 @@ section { padding: 84px 32px; position: relative; z-index: 2; }
 .section-head h2 { font-size: clamp(28px, 3.6vw, 40px); }
 .section-head p { color: var(--ink-soft); margin-top: 12px; }
 
-/* ---------- Hero ---------- */
-.hero { padding-top: 76px; padding-bottom: 68px; }
+/* ---------- Hero ----------
+   The hero sits on the deeper paper so the top of the page announces itself.
+   A section with its own background covers the page grain, so it carries its
+   own copy of it — otherwise this band would read smoother than the rest. */
+.hero {
+  padding-top: 54px; padding-bottom: 46px;
+  background: var(--paper-deep);
+  border-bottom: 1px solid var(--rule);
+  overflow: hidden;
+}
+.hero::after {
+  content: ""; position: absolute; inset: 0; z-index: 1;
+  pointer-events: none; opacity: .35; background-image: var(--grain);
+}
+.hero .inner { position: relative; z-index: 2; }
+
+/* The restaurant's own name, blown up until it stops being words and starts
+   being texture. Decorative — the readable wordmark is in the header. */
+.hero-mark {
+  position: absolute; z-index: 0;
+  left: -.06em; top: 50%; transform: translateY(-50%);
+  font-family: var(--font-cjk); font-size: clamp(300px, 30vw, 470px);
+  line-height: .78; letter-spacing: -.04em; color: var(--rule);
+  pointer-events: none; user-select: none; white-space: nowrap;
+}
+
 .hero-grid {
   display: grid; grid-template-columns: 1.15fr .85fr;
   gap: 64px; align-items: end;
 }
-.hero h1 { font-size: clamp(42px, 6.4vw, 78px); }
+.hero h1 { font-size: clamp(42px, 6vw, 72px); }
 .hero .lede,
 .lede {
   font-size: 19px; color: var(--ink-soft);
-  margin: 24px 0 30px; max-width: 46ch;
+  margin: 20px 0 26px; max-width: 46ch;
 }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
-.hero-note { font-size: 14px; color: var(--ink-soft); margin: 18px 0 0; max-width: 42ch; }
+.hero-note { font-size: 14px; color: var(--ink-soft); margin: 14px 0 0; max-width: 42ch; }
 
 .status {
   display: inline-flex; align-items: center; gap: 8px;
   font-size: 14px; font-weight: 700; letter-spacing: .04em;
-  text-transform: uppercase; color: var(--jade); margin-bottom: 22px;
+  text-transform: uppercase; color: var(--jade); margin-bottom: 16px;
 }
 .status::before {
   content: ""; width: 8px; height: 8px; border-radius: 50%;
@@ -171,6 +196,28 @@ section { padding: 84px 32px; position: relative; z-index: 2; }
 /* What the line says before the clock script runs, or if it never does. */
 .status.neutral { color: var(--ink-soft); text-transform: none; letter-spacing: .01em; }
 .status.neutral::before { display: none; }
+
+/* The right column bottom-aligns with the headline, so it fills upward. */
+.hero-side { display: grid; align-content: end; gap: 38px; }
+
+/* A readable slice of the menu, and the whole panel is the link. */
+.menu-peek { display: block; text-decoration: none; color: inherit; }
+.menu-peek .eyebrow { margin-bottom: 14px; }
+.menu-peek ul { list-style: none; margin: 0; padding: 0; }
+.menu-peek li {
+  font-family: var(--font-display); font-size: 21px; line-height: 1.25;
+  font-variation-settings: "SOFT" 30, "WONK" 1;
+  padding: 11px 0; border-bottom: 1px solid var(--rule);
+}
+.menu-peek li:first-child { padding-top: 0; }
+.menu-peek li:last-child { border-bottom: 0; }
+.peek-cta {
+  display: inline-block; margin-top: 16px;
+  font-size: 13px; font-weight: 700; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--lacquer);
+}
+.peek-cta::after { content: " \2192"; }
+.menu-peek:hover .peek-cta { text-decoration: underline; text-underline-offset: 4px; }
 
 /* Proof block — real numbers, set like a masthead */
 .proof { border-top: 2px solid var(--ink); padding-top: 22px; }
@@ -385,6 +432,12 @@ cite {
   .dishes, .quote-grid { grid-template-columns: 1fr 1fr; }
   .hero-grid, .direct-grid, .find-grid { grid-template-columns: 1fr; gap: 44px; }
   .hero-grid { align-items: start; }
+  /* Stacked, the panel has no column to fill — keep it to a readable width. */
+  .hero-side { align-content: start; gap: 34px; }
+  .menu-peek { max-width: 34ch; }
+  /* Stacked, the hero is tall — pin the mark behind the headline instead of
+     letting it float in the middle of the column. */
+  .hero-mark { top: 62px; transform: none; font-size: clamp(190px, 52vw, 260px); }
 }
 
 @media (max-width: 720px) {
@@ -430,7 +483,8 @@ cite {
 /* ---------- Print ---------- */
 @media print {
   .site-header, .jump, .sticky-call, .skip, .menu-search,
-  .search-count, .site-footer, .hero-actions, .map { display: none !important; }
+  .search-count, .site-footer, .hero-actions, .map,
+  .menu-peek { display: none !important; }
   body { background: #fff; color: #000; font-size: 11pt; padding: 0; }
   body::before { display: none; }
   section, .course { padding: 0 0 18pt; }

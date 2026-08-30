@@ -4,30 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Amazing Kitchen — Chinese Food in Tracy, CA | 2211 N Tracy Blvd</title>
-  <meta name="description" content="Family-run Chinese kitchen on N Tracy Blvd. Honey walnut prawns, salt &amp; pepper wings, house special chow mein. Open Tuesday to Sunday, 11am to 9pm. Call (209) 835-3888 to order direct.">
-  <link rel="canonical" href="https://www.amazingkitchentracy.com/">
-  <meta property="og:type" content="restaurant">
+  <meta name="description" content="Family-run Chinese kitchen at 2211 N Tracy Blvd. Honey walnut prawns, salt and pepper wings, house chow mein. Open Tuesday to Sunday, 11am to 9pm.">
+
+  <!-- TODO at launch: confirm the live domain, then add
+       <link rel="canonical"> and absolute og:url / og:image here and in sitemap.xml. -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Amazing Kitchen">
   <meta property="og:title" content="Amazing Kitchen — Chinese Food in Tracy, CA">
   <meta property="og:description" content="Big plates, fair prices, and a menu Tracy has been ordering from for years. Call (209) 835-3888.">
-  <meta property="og:url" content="https://www.amazingkitchentracy.com/">
+  <meta property="og:image" content="og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
-  <!-- Only the 25 Chinese glyphs this site actually uses. -->
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;600&text=%E5%90%8D%E8%BB%92%E8%9D%A6%E7%89%9B%E9%A3%AF%E9%BA%B5%E9%9B%9E%E7%BF%85%E5%8D%88%E9%A4%90%E9%BB%9E%E5%BF%83%E5%89%8D%E8%8F%9C%E6%B9%AF%E8%B1%AC%E6%B5%B7%E9%AE%AE%E7%B4%A0%E7%82%92%E8%8A%99%E8%93%89%E8%9B%8B%E6%B2%B3%E7%B2%89&display=swap" rel="stylesheet">
+  <!-- SOFT and WONK have to be named here or Google strips them out of the file. -->
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,400..700,0..100,0..1&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Traditional forms, so the family has to be TC. Only the glyphs this site uses. -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600&text=%E5%90%8D%E8%BB%92%E8%9D%A6%E7%89%9B%E9%A3%AF%E9%BA%B5%E9%9B%9E%E7%BF%85%E5%8D%88%E9%A4%90%E9%BB%9E%E5%BF%83%E5%89%8D%E8%8F%9C%E6%B9%AF%E8%B1%AC%E6%B5%B7%E9%AE%AE%E7%B4%A0%E7%82%92%E8%8A%99%E8%93%89%E8%9B%8B%E6%B2%B3%E7%B2%89&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ChineseRestaurant",
+    "@id": "#restaurant",
     "name": "Amazing Kitchen",
     "alternateName": "名軒",
     "servesCuisine": "Chinese",
     "telephone": "+12098353888",
-    "url": "https://www.amazingkitchentracy.com/",
-    "menu": "https://www.amazingkitchentracy.com/menu.html",
     "priceRange": "$$",
-    "acceptsReservations": "True",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "2211 N Tracy Blvd",
@@ -43,46 +53,63 @@
   </script>
 </head>
 <body>
+  <a class="skip" href="#main">Skip to content</a>
+
   <header class="site-header">
-    <a class="wordmark" href="index.html">Amazing Kitchen <span class="cjk">名軒</span></a>
+    <a class="wordmark" href="index.html">Amazing Kitchen <span class="cjk" lang="zh-Hant">名軒</span></a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">☰</button>
     <nav class="site-nav" id="site-nav">
       <a href="menu.html">Menu</a>
       <a href="#order">Order Direct</a>
       <a href="#find-us">Hours &amp; Location</a>
-      <a class="btn btn-primary" href="tel:+12098353888">(209) 835-3888</a>
+      <a class="btn btn-primary" href="tel:+12098353888" data-place="header">(209) 835-3888</a>
     </nav>
   </header>
 
-  <main>
+  <main id="main">
     <section class="hero">
+      <span class="hero-mark" aria-hidden="true" lang="zh-Hant">名軒</span>
       <div class="inner hero-grid">
         <div>
-          <p class="status reveal" id="open-status">Checking hours</p>
+          <p class="status neutral reveal" id="open-status">Tuesday to Sunday &middot; 11am&ndash;9pm</p>
           <h1 class="reveal">Big plates.<br>Fair prices.<br>Tracy knows.</h1>
-          <p class="lede reveal">A small, family-run Chinese kitchen on North Tracy Boulevard. Honey walnut prawns, salt and pepper wings, and chow mein that comes out fast and comes out hot.</p>
+          <p class="lede reveal">A small, family-run Chinese kitchen on North Tracy Boulevard. Everything is cooked to order, and it comes out fast and comes out hot.</p>
           <p class="hero-actions reveal">
-            <a class="btn btn-primary" href="tel:+12098353888">Call to order</a>
+            <a class="btn btn-primary" href="tel:+12098353888" data-place="hero">Call to order</a>
             <a class="btn btn-ghost" href="menu.html">See the menu</a>
           </p>
-          <p class="hero-note">Calling is the cheapest way to order. Delivery apps add their own fees on top of our prices.</p>
+          <p class="hero-note reveal">Calling is the cheapest way to order. Delivery apps add their own fees on top of our prices.</p>
         </div>
 
-        <div class="proof">
-          <dl>
-            <div>
-              <dd>4.5<span aria-hidden="true">★</span></dd>
-              <dt>Average rating</dt>
-            </div>
-            <div>
-              <dd>750+</dd>
-              <dt>Reviews across Google &amp; Yelp</dt>
-            </div>
-            <div>
-              <dd>6</dd>
-              <dt>Days a week, 11am&ndash;9pm</dt>
-            </div>
-          </dl>
+        <div class="hero-side">
+          <a class="menu-peek reveal" href="menu.html">
+            <p class="eyebrow">On the menu</p>
+            <ul>
+              <li>Honey Walnut Prawns</li>
+              <li>Salt &amp; Pepper Chicken Wings</li>
+              <li>House Special Chow Mein</li>
+              <li>Mongolian Beef</li>
+              <li>Kung Pao Tofu</li>
+            </ul>
+            <span class="peek-cta">See all 136 dishes</span>
+          </a>
+
+          <div class="proof">
+            <dl>
+              <div>
+                <dt>Average rating</dt>
+                <dd>4.5<span aria-hidden="true">★</span></dd>
+              </div>
+              <div>
+                <dt>Reviews across Google &amp; Yelp</dt>
+                <dd>750+</dd>
+              </div>
+              <div>
+                <dt>Days a week, 11am&ndash;9pm</dt>
+                <dd>6</dd>
+              </div>
+            </dl>
+          </div>
         </div>
       </div>
     </section>
@@ -94,13 +121,13 @@
           <h2>The phone is still the best way to reach us.</h2>
           <p>We are on the delivery apps, and you are welcome to use them. But those orders carry service fees and commissions that we do not control, and the prices there are higher than ours.</p>
           <p>Call the shop and you get our real prices, you can ask about the specials, and we can tell you exactly how long it will be.</p>
-          <p style="margin-bottom:0">
+          <p class="last">
             <a class="btn btn-ghost" href="https://order.online/store/amazing-kitchen-tracy-23880385" rel="nofollow noopener" target="_blank">Order online instead</a>
           </p>
         </div>
         <div class="phone-card">
           <p class="label">Call for pickup</p>
-          <a class="number" href="tel:+12098353888">(209)&nbsp;835-3888</a>
+          <a class="number" href="tel:+12098353888" data-place="phone-card">(209)&nbsp;835-3888</a>
           <p class="hours-line">Tuesday to Sunday, 11am to 9pm. Closed Mondays.<br>2211 N Tracy Blvd, Tracy, CA 95376</p>
         </div>
       </div>
@@ -115,37 +142,37 @@
         </div>
         <div class="dishes">
           <article class="dish">
-            <div class="frame"><span class="placeholder" aria-hidden="true">蝦</span></div>
+            <div class="frame"><span class="placeholder" aria-hidden="true" lang="zh-Hant">蝦</span></div>
             <h3>Honey Walnut Prawns</h3>
             <p>Crisp prawns in a light honey glaze with candied walnuts. The single most ordered dish on the menu.</p>
             <p class="stat">97% positive &middot; 173 ratings</p>
           </article>
           <article class="dish">
-            <div class="frame"><span class="placeholder" aria-hidden="true">牛</span></div>
+            <div class="frame"><span class="placeholder" aria-hidden="true" lang="zh-Hant">牛</span></div>
             <h3>Broccoli Beef</h3>
             <p>Tender beef and fresh broccoli in a savory brown sauce. Plain, generous, and hard to beat.</p>
             <p class="stat">98% positive &middot; 125 ratings</p>
           </article>
           <article class="dish">
-            <div class="frame"><span class="placeholder" aria-hidden="true">飯</span></div>
+            <div class="frame"><span class="placeholder" aria-hidden="true" lang="zh-Hant">飯</span></div>
             <h3>House Special Fried Rice</h3>
             <p>Chicken, BBQ pork, and shrimp. The one to order when the table cannot agree.</p>
             <p class="stat">95% positive &middot; 114 ratings</p>
           </article>
           <article class="dish">
-            <div class="frame"><span class="placeholder" aria-hidden="true">麵</span></div>
+            <div class="frame"><span class="placeholder" aria-hidden="true" lang="zh-Hant">麵</span></div>
             <h3>House Special Chow Mein</h3>
             <p>BBQ pork, chicken, and shrimp tossed through soft egg noodles.</p>
             <p class="stat">93% positive &middot; 101 ratings</p>
           </article>
           <article class="dish">
-            <div class="frame"><span class="placeholder" aria-hidden="true">雞</span></div>
+            <div class="frame"><span class="placeholder" aria-hidden="true" lang="zh-Hant">雞</span></div>
             <h3>Orange Chicken</h3>
             <p>Crisp chicken in a bright, tangy orange sauce. The kids' order, and plenty of adults' too.</p>
             <p class="stat">94% positive &middot; 132 ratings</p>
           </article>
           <article class="dish">
-            <div class="frame"><span class="placeholder" aria-hidden="true">翅</span></div>
+            <div class="frame"><span class="placeholder" aria-hidden="true" lang="zh-Hant">翅</span></div>
             <h3>Amazing Wings</h3>
             <p>Eight wings, dry seasoned Korean style, with real heat behind them.</p>
             <p class="stat">Hot &amp; spicy &middot; a house signature</p>
@@ -158,7 +185,7 @@
       <div class="inner">
         <div class="section-head">
           <p class="eyebrow">Reputation</p>
-          <h2>Hundreds of reviews, and the same three words keep coming up.</h2>
+          <h2>Hundreds of reviews, and the same three phrases keep coming up.</h2>
         </div>
         <div class="quote-grid">
           <div>
@@ -174,7 +201,7 @@
             <cite>Lunch specials from around $12</cite>
           </div>
         </div>
-        <p style="margin-top:38px">
+        <p class="read-more">
           Read them for yourself on
           <a href="https://www.yelp.com/biz/amazing-kitchen-tracy-3" rel="noopener" target="_blank">Yelp</a>,
           where we have 488 reviews and 441 customer photos.
@@ -186,7 +213,7 @@
       <div class="inner find-grid">
         <div>
           <p class="eyebrow">Hours</p>
-          <h2 style="font-size:clamp(26px,3.2vw,34px);margin-bottom:26px">Open six days a week.</h2>
+          <h2>Open six days a week.</h2>
           <table class="hours-table" id="hours-table">
             <tbody>
               <tr data-day="1" class="shut"><th scope="row">Monday</th><td>Closed</td></tr>
@@ -198,11 +225,11 @@
               <tr data-day="0"><th scope="row">Sunday</th><td>11am &ndash; 9pm</td></tr>
             </tbody>
           </table>
-          <p style="font-size:15px;color:var(--ink-soft)">Lunch specials are served from 11am to 3pm.</p>
+          <p class="hours-fine">Lunch specials are served from 11am to 3pm.</p>
         </div>
         <div>
           <p class="eyebrow">Find us</p>
-          <h2 style="font-size:clamp(26px,3.2vw,34px);margin-bottom:26px">2211 N Tracy Blvd.</h2>
+          <h2>2211 N Tracy Blvd.</h2>
           <address class="address">
             2211 N Tracy Blvd<br>
             Tracy, CA 95376
@@ -210,8 +237,14 @@
           <p>
             <a href="https://www.google.com/maps/dir/?api=1&amp;destination=2211+N+Tracy+Blvd%2C+Tracy%2C+CA+95376" rel="noopener" target="_blank">Get directions</a>
           </p>
-          <p style="margin-top:26px">
-            <a class="btn btn-primary" href="tel:+12098353888">(209) 835-3888</a>
+          <iframe
+            class="map"
+            title="Map showing Amazing Kitchen at 2211 N Tracy Blvd, Tracy, CA"
+            src="https://maps.google.com/maps?q=2211%20N%20Tracy%20Blvd%2C%20Tracy%2C%20CA%2095376&amp;z=15&amp;output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <p class="find-cta">
+            <a class="btn btn-primary" href="tel:+12098353888" data-place="find-us">(209) 835-3888</a>
           </p>
         </div>
       </div>
@@ -221,22 +254,22 @@
   <footer class="site-footer">
     <div class="inner footer-grid">
       <div>
-        <p style="margin:0 0 6px"><strong style="color:var(--paper)">Amazing Kitchen</strong> <span class="cjk">名軒</span></p>
-        <p style="margin:0">2211 N Tracy Blvd, Tracy, CA 95376<br><a href="tel:+12098353888">(209) 835-3888</a></p>
+        <p><strong>Amazing Kitchen</strong> <span class="cjk" lang="zh-Hant">名軒</span></p>
+        <p>2211 N Tracy Blvd, Tracy, CA 95376<br><a href="tel:+12098353888" data-place="footer">(209) 835-3888</a></p>
       </div>
       <div>
-        <p style="margin:0 0 6px">Tuesday &ndash; Sunday, 11am &ndash; 9pm</p>
-        <p style="margin:0">Closed Mondays</p>
+        <p>Tuesday &ndash; Sunday, 11am &ndash; 9pm</p>
+        <p>Closed Mondays</p>
       </div>
       <div>
-        <p style="margin:0 0 6px"><a href="menu.html">Menu</a></p>
-        <p style="margin:0"><a href="https://www.yelp.com/biz/amazing-kitchen-tracy-3" rel="noopener" target="_blank">Reviews on Yelp</a></p>
+        <p><a href="menu.html">Menu</a></p>
+        <p><a href="https://www.yelp.com/biz/amazing-kitchen-tracy-3" rel="noopener" target="_blank">Reviews on Yelp</a></p>
       </div>
     </div>
   </footer>
 
   <div class="sticky-call">
-    <a class="btn btn-primary" href="tel:+12098353888">Call to order &middot; (209) 835-3888</a>
+    <a class="btn btn-primary" href="tel:+12098353888" data-place="sticky-bar">Call to order &middot; (209) 835-3888</a>
   </div>
 
   <script src="script.js"></script>
